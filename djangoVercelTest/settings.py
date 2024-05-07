@@ -76,17 +76,31 @@ WSGI_APPLICATION = 'djangoVercelTest.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': getenv('PGDATABASE'),
-        'USER': getenv('PGUSER'),
-        'PASSWORD': getenv('PGPASSWORD'),
-        'HOST': getenv('PGHOST'),
+        'NAME': 'verceltest',
+        'USER': 'filmomania_owner',
+        'PASSWORD': 'j7JQBAfmFg2w',
+        'HOST': 'ep-fancy-cloud-a2lym6ou.eu-central-1.aws.neon.tech',
         'PORT': getenv('PGPORT', 5432),
         'OPTIONS': {
             'sslmode': 'require',
         },
     }
+
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': getenv('PGDATABASE'),
+    #     'USER': getenv('PGUSER'),
+    #     'PASSWORD': getenv('PGPASSWORD'),
+    #     'HOST': getenv('PGHOST'),
+    #     'PORT': getenv('PGPORT', 5432),
+    #     'OPTIONS': {
+    #         'sslmode': 'require',
+    #     },
+    # }
 }
 
 
